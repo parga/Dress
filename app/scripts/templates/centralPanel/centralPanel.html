@@ -1,0 +1,10 @@
+<ul class="elementsList" >
+<% _.each(tweets, function (tweet) { %>
+
+  <li>
+  	<img src="<%= tweet.get('profile_image_url_https') %>" />
+  	<p><%= tweet.get('text') %></p>
+  </li>
+
+<% }); %>
+</ul>

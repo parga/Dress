@@ -1,9 +1,58 @@
-$iconSpritePath: "../images/glyphicons-halflings.png";
-$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
-
 @import 'sass-bootstrap/lib/bootstrap';
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
+@mixin shadow {
+  -moz-box-shadow: 3px 3px 4px #666;
+  -webkit-box-shadow: 3px 3px 4px #666;
+  box-shadow: 3px 3px 4px #666;
+  /* For IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+  /* For IE 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+.header{
+  position:fixed;
+  top:0px;
+  margin:auto;
+  z-index:100000;
+  width:100%;
+}
+.main {
+	padding: 0px 25px 0px 25px;
+  margin-top: 60px;
+  .sidePanel{
+  	//background-color: blue;
+  }
+
+  .centralPanel{
+    @include shadow;
+    height: 100%;
+    border-style: solid;
+    border-width: 1px 0px 0px 1px;
+    ul{
+    	list-style-type: none;
+    	padding: 0px;
+    	margin: 0px;
+      li{
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        padding: 3px 3px 3px 3px;
+        img{
+          float: left;
+          display: inline-block;
+          width: 30px;
+          margin-right: 15px;
+        }
+        p {
+          margin-left: 45px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.profile{
+	background-color: green;
 }
